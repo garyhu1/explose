@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/f"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdf1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdf2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdf3"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+</FrameLayout>

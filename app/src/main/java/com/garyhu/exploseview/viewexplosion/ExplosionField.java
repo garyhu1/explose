@@ -79,7 +79,6 @@ public class ExplosionField extends View{
         if(rect.width()==0||rect.height()==0){
             return;
         }
-        
         //震动动画
         ValueAnimator animator = ValueAnimator.ofFloat(0f, 1f).setDuration(150);
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -121,6 +120,9 @@ public class ExplosionField extends View{
                 explosionAnimators.remove(animation);
                 explosionAnimatorsMap.remove(view);
                 animation = null;
+                if(callback!=null){
+                    callback.setL(view);
+                }
             }
         });
         animator.start();
@@ -166,5 +168,16 @@ public class ExplosionField extends View{
             };
         }
         return onClickListener;
+    }
+
+
+    private Callback callback;
+
+    public void setCallback(Callback callback){
+        this.callback = callback;
+    }
+
+    public interface Callback{
+        void setL(View v);
     }
 }
